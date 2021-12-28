@@ -26,7 +26,7 @@ jobs:
       
     # Changes the base tag in index.html from ‘/’ to ‘PortfolioBlazorWasm’ to match the GitHub Pages repository subdirectory
     - name: Change base-tag in index.html to PortfolioBlazorWasm
-      run: sed -i ‘s/<base href=”\/” \/>/<base href=”\/PortfolioBlazorWasm\/” \/>/g’ release/wwwroot/index.html
+      run: sed -i 's/<base href="\/" \/>/<base href="\/PortfolioBlazorWasm\/" \/>/g' release/wwwroot/index.html
           
     #  Copy index.html to 404.html to serve the same file when a file is not found
     - name: Copy index.html to 404.html
