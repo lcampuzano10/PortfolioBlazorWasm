@@ -1,0 +1,42 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main class="img-wrap">
+       <div class="top-row px-4">
+            <button>Switch color</button>
+           <a href="/mainMic/principal">About this Project</a>
+        </div>
+
+        <article class="content px-4 ">
+            <div class="page-content">
+                @Body
+            </div>
+        </article>
+    </main>
+    
+</div>
+<footer class="sticky-footer footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">Copyright &copy; 2020 @_showYear</span>       
+    </div>
+</footer>
+
+@code {
+    //private int _thisYear;
+    private string _showYear;
+
+    protected override void OnInitialized()
+    {
+        int thisYear = DateTime.Today.Year;
+
+        if (thisYear > 2020)
+        {
+            _showYear = $" - {thisYear}";
+        }
+    }
+
+}
