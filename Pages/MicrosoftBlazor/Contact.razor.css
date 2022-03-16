@@ -23,6 +23,45 @@
             .boxes div:hover span {
                 color: #000;
             }
+
+.locationDiv {
+    display: grid;
+    padding-top: 20px;
+    grid-gap: 5px;
+    grid-template-areas: "location1"
+        "location2"
+        /*"job1 job2 job3"*/
+        ;
+    grid-template-columns: 1fr;
+}
+    .locationDiv .location1 {
+        grid-area: location1;
+    }
+    
+    .locationDiv .location2 {
+        grid-area: location2;
+    }
+
+.emailDiv {
+    display: grid;
+    padding-top: 20px;
+    grid-gap: 10px;
+    grid-template-areas: "email1"
+        "email2"
+        /*"job1 job2 job3"*/
+        ;
+    grid-template-columns: 1fr;
+}
+
+    .emailDiv .email1 {
+        grid-area: email1;
+    }
+
+    .emailDiv .email2 {
+        grid-area: email2;
+    }
+
+
 /*Small Screen ???*/
 @media screen and (max-width: 900px) {
     .smText {
