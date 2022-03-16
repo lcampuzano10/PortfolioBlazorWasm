@@ -15,4 +15,10 @@
     <Folder Include="wwwroot\img\projects\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Data\Description.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
