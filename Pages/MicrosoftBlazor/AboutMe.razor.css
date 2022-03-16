@@ -1,6 +1,6 @@
 ﻿.home-info {
     display: grid;
-    padding-top: 200px;
+    padding-top: 100px;
     grid-gap: 20px;
     grid-template-areas: "bioimage bio bio"
         /*"job1 job2 job3"*/
@@ -22,6 +22,7 @@
 /*Small Screen ???*/
 @media screen and (max-width: 900px) {
     .home-info {
+        padding-top: 20px;
         grid-template-areas: "bioimage"
             "bio";
         grid-template-columns: 1fr;
