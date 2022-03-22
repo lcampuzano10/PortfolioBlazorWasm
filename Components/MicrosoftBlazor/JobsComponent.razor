@@ -1,0 +1,22 @@
+﻿@using PortfolioAndBlog.Models
+<div class="job job-1">
+	<h3 class="topHead">@MyJobs.InfoHeading</h3>  
+	<ul>
+		@foreach (Job job in MyJobs.Jobs.OrderByDescending(d => d.DateFinished))
+		{
+			<li>
+				<a>@job.JobTitle , @job.Company , @job.LocationCompany
+				<br />
+				<span class="workedDate">@job.DateStarted.ToString("Y") – 
+							@((job.DateFinished.Year < DateTime.Now.Year) ? job.DateFinished.ToString("Y") 	: "Current")</span>
+				</a>
+			</li>			
+		}
+	</ul>
+</div>
+
+@code {
+
+	[Parameter]
+	public MyJobsPage MyJobs { get; set; }
+}

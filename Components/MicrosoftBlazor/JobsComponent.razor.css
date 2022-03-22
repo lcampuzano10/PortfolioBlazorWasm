@@ -1,0 +1,14 @@
+﻿.job {
+	background: #515151;
+	padding: 0.5rem;
+	border-bottom: #761aee 5px solid;
+}
+
+.job-1 {
+	grid-area: job1;
+}
+
+.topHead {
+	color: #761aee;
+	font-weight: bold;
+}

@@ -1,0 +1,27 @@
+﻿@using PortfolioAndBlog.Models
+<div class="job job-3">
+	<h3 class="topHead">EDUCATION</h3>
+	@if (EducationInfo.Count > 0)
+	{
+		foreach (Education educ in EducationInfo)
+		{
+			<p>@educ.Degree</p>
+			<span class="school">@educ.SchoolName, @educ.LocationSchool</span>
+			<br />
+			<span class="education">@educ.DateStarted.Year - @educ.DateFinished.Year</span>
+		}
+	}
+	<hr />
+	<h3 class="topHead">RESUME</h3>
+	<p>
+		For more projects and more information. You can download my RESUME
+		<a href="./files/DEV_Resume_Luis Campuzano.pdf" download="DEV_Resume_Luis Campuzano.pdf">
+		<span class="linkColor">Using this link</span></a>
+	</p>
+</div>
+
+@code {
+
+	[Parameter]
+	public  List<Education> EducationInfo { get; set; }
+}

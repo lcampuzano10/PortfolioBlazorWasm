@@ -1,0 +1,17 @@
+﻿@using PortfolioAndBlog.Models
+<div class="job job-2">
+	<h3 class="topHead">@Skill.DescriptionHeading.GetDisplayName().ToUpper()</h3>  
+	<ul>
+		@foreach (Description descr in Skill.Descriptions.Take(4))
+		{
+			<li>@descr.DescriptionText</li> 
+		}
+		<li>... Click Here to see All of them</li>
+	</ul>
+</div>
+
+@code {
+
+	[Parameter]
+	public Skill Skill { get; set; }
+}

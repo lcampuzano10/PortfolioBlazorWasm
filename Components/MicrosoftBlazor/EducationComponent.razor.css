@@ -1,0 +1,26 @@
+﻿.job {
+	background: #515151;
+	padding: 0.5rem;
+	border-bottom: #761aee 5px solid;
+}
+
+.topHead {
+	color: #761aee;
+	font-weight: bold;
+}
+
+.job-3 {
+	grid-area: job3;
+}
+
+
+.education {
+	color: #761aee;
+	font-weight: 700;
+	padding-left: 25px;
+}
+
+.school {
+	font-style: italic;
+	padding-left: 25px;
+}
