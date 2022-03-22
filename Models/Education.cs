@@ -9,6 +9,6 @@
         public DateTime DateFinished { get; set; }
         public DescriptionHeading? DescriptionHeading { get; set; }
 
-        public ICollection<Description>? Descriptions { get; set; }
+        //public ICollection<Description>? Descriptions { get; set; }
     }
 }
