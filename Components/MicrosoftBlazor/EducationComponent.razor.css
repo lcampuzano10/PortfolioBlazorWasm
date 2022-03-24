@@ -27,3 +27,18 @@
 	font-style: italic;
 	padding-left: 25px;
 }
+
+.resume-link {
+	text-decoration: none;
+	color: #3c176b;
+}
+
+	.resume-link:hover {
+		color: #3d1570;
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+.resume-margin {
+	margin-left: 25px;
+}

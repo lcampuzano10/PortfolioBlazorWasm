@@ -25,11 +25,11 @@
 
 .skill-link {
 	text-decoration: none;
-	color: darkblue;
+	color: white;
 }
 
 	.skill-link:hover {
-		color: blue;
+		color: #3d1570;
 		cursor: pointer;
 		text-decoration: underline;
 	}

@@ -1,0 +1,43 @@
+﻿<div class="item">
+	<a class="project-link" @onclick="() => OpenProjectDialog()">
+		<img width="500" height="300" src="@Project.ProjectPicturePath" alt="Project @Project.ProjectNameDescription" />
+	</a>
+	<div class="d-grid gap-2">
+		<a href="#" class="btn btn-dark btn-block">
+			<i class="fas fa-eye"></i> @Project.ProjectName
+		</a>
+	</div>
+	<div>
+		<p>@Project.ProjectDescriptions.DescriptionText</p>              
+	</div>
+</div>
+
+@if (ProjectDialogOpen)
+{
+	<ProjectDialog DialogType = "Models.ModalDialogType.Ok"
+				 Project="Project"
+				 OnClose="@OnDialogClose">
+	</ProjectDialog>
+}
+
+@code {
+	[Parameter]
+	public MyProject Project { get; set; }
+
+	public bool ProjectDialogOpen { get; set; }
+
+	private void OnDialogClose(bool accepted)
+	{
+		ProjectDialogOpen = false;
+		StateHasChanged();
+	}
+
+	private void OpenProjectDialog()
+	{
+		//var findJob = Project.Where(p => p.Id == id).FirstOrDefault();
+		//SelectedJob = findJob;
+		ProjectDialogOpen = true;
+		StateHasChanged();
+	}
+
+}

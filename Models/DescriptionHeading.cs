@@ -9,6 +9,8 @@ namespace PortfolioAndBlog.Models
         [Display(Name = "Skills")]
         TechnicalSkills,
         [Display(Name = "Education")]
-        Education
+        Education,
+        [Display(Name = "Projects")]
+        Projects
     }
 }

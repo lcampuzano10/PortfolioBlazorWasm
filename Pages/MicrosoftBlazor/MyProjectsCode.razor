@@ -1,0 +1,32 @@
+﻿@page "/myprojectscode"
+
+<div id="work">
+    @if (MyProjectsPageInfo is not null)
+    {
+       <h1 class="lg-heading">@MyProjectsPageInfo.HeadingPart1 <span class="text-lc-secondary">@MyProjectsPageInfo.HeadingPart2</span></h1>
+       <h2 class="sm-heading">
+            @MyProjectsPageInfo.InfoHeading
+        </h2>
+        <div class="projects text-white">
+            @foreach (MyProject project in MyProjectsPageInfo.Projects)
+            {
+                <MyProjectsComponent Project="project" />
+            }           
+        </div>
+    }
+</div>
+
+@code {
+    public MyProjectsPage MyProjectsPageInfo { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        MyProjectsPageInfo = LoadProjects();
+    }
+
+    private MyProjectsPage LoadProjects()
+    {
+        return SeedData.MyProjectsInfo;
+    }
+}

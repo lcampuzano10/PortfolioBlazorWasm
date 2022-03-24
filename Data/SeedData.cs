@@ -32,7 +32,7 @@ namespace PortfolioAndBlog.Data
 		public static List<Education> EducationInfo = new()
 		{
 			new Education
-            {
+			{
 				Id = new Guid(),
 				Degree = "Bachelor of Science in Information Technology",
 				SchoolName = "University of South Florida",
@@ -42,7 +42,7 @@ namespace PortfolioAndBlog.Data
 				DescriptionHeading = DescriptionHeading.Education
 			},
 			new Education
-            {
+			{
 				Id = new Guid(),
 				Degree = "Associate in Science in Information Technology",
 				SchoolName = "Bergen Community College",
@@ -74,76 +74,76 @@ namespace PortfolioAndBlog.Data
 				new Description
 				{
 					DescriptionHeading = DescriptionHeading.TechnicalSkills,
-					DescriptionText = @"Proficient in .Net 5, .NET Core 3.1, 3.0, 2.2, ASP.NET, .NET Framework 4.6/4.7.1+, and IIS 7.0",
+					DescriptionText = @"Proficient in .Net6, .Net 5, .NET Core 3.1, 3.0, 2.2, ASP.NET, .NET Framework 4.6/4.7.1+, and IIS 7.0",
 					DescriptionIdMaster = new Guid()
 				},
-                new Description
-                {
-                    DescriptionHeading = DescriptionHeading.TechnicalSkills,
-                    DescriptionText = @"Proficient in HTML5, CSS, JavaScript, Bootstrap, JQUERY, Ajax.",
-                    DescriptionIdMaster = new Guid()
-                },
-                new Description
-                {
-                    DescriptionHeading = DescriptionHeading.TechnicalSkills,
-                    DescriptionText = @"Proficient in JSON, RESTful APIs, LINQ.",
-                    DescriptionIdMaster = new Guid()
-                },
-                new Description
-                {
-                    DescriptionHeading = DescriptionHeading.TechnicalSkills,
-                    DescriptionText = @"Proficient on Azure DevOps using Git commands and TFS using VS Team Explorer",
-                    DescriptionIdMaster = new Guid()
-                },
-                new Description
-                {
-                    DescriptionHeading = DescriptionHeading.TechnicalSkills,
-                    DescriptionText = @"Proficient in Database Design, scripting, SSIS and store procedure using T-SQL and SQL Server.",
-                    DescriptionIdMaster = new Guid()
-                },
-                new Description
-                {
-                    DescriptionHeading = DescriptionHeading.TechnicalSkills,
-                    DescriptionText = @"Proficient in Project Lifecycle Development, and QA testing.",
-                    DescriptionIdMaster = new Guid()
-                },
-                new Description
-                {
-                    DescriptionHeading = DescriptionHeading.TechnicalSkills,
-                    DescriptionText = @"Skilled at working with Docker, Unit Testing and Kubernetes.",
-                    DescriptionIdMaster = new Guid()
-                },
-                new Description
-                {
-                    DescriptionHeading = DescriptionHeading.TechnicalSkills,
-                    DescriptionText = @"Well versed in working with Linux, Windows operating systems on PC and Servers, as well as Office 2016 and 2019.",
-                    DescriptionIdMaster = new Guid()
-                },
-                new Description
-                {
-                    DescriptionHeading = DescriptionHeading.TechnicalSkills,
-                    DescriptionText = @"Skilled at working with web services of SOAP, JSON and XML.",
-                    DescriptionIdMaster = new Guid()
-                },
-                new Description
-                {
-                    DescriptionHeading = DescriptionHeading.TechnicalSkills,
-                    DescriptionText = @"Knowledge of Angular 6+, TypeScript, React and DevExtreme (DevExpress Web).",
-                    DescriptionIdMaster = new Guid()
-                },
-                new Description
-                {
-                    DescriptionHeading = DescriptionHeading.TechnicalSkills,
-                    DescriptionText = @"Knowledge of AWS EC2, AWS CloudFormation, AWS S3, AWS Elastic Beanstalk, AWS RDS, AWS Route 53, Scrum, RDBMS, MySQL.",
-                    DescriptionIdMaster = new Guid()
-                },
-                new Description
-                {
-                    DescriptionHeading = DescriptionHeading.TechnicalSkills,
-                    DescriptionText = @"Knowledge of Google Maps API, Twilio API",
-                    DescriptionIdMaster = new Guid()
-                }
-            }
+				new Description
+				{
+					DescriptionHeading = DescriptionHeading.TechnicalSkills,
+					DescriptionText = @"Proficient in HTML5, CSS, JavaScript, Bootstrap, JQUERY, Ajax.",
+					DescriptionIdMaster = new Guid()
+				},
+				new Description
+				{
+					DescriptionHeading = DescriptionHeading.TechnicalSkills,
+					DescriptionText = @"Proficient in JSON, RESTful APIs, LINQ.",
+					DescriptionIdMaster = new Guid()
+				},
+				new Description
+				{
+					DescriptionHeading = DescriptionHeading.TechnicalSkills,
+					DescriptionText = @"Proficient on Azure DevOps using Git commands and TFS using VS Team Explorer",
+					DescriptionIdMaster = new Guid()
+				},
+				new Description
+				{
+					DescriptionHeading = DescriptionHeading.TechnicalSkills,
+					DescriptionText = @"Proficient in Database Design, scripting, SSIS and store procedure using T-SQL and SQL Server.",
+					DescriptionIdMaster = new Guid()
+				},
+				new Description
+				{
+					DescriptionHeading = DescriptionHeading.TechnicalSkills,
+					DescriptionText = @"Proficient in Project Lifecycle Development, and QA testing.",
+					DescriptionIdMaster = new Guid()
+				},
+				new Description
+				{
+					DescriptionHeading = DescriptionHeading.TechnicalSkills,
+					DescriptionText = @"Skilled at working with Docker, Unit Testing and Kubernetes.",
+					DescriptionIdMaster = new Guid()
+				},
+				new Description
+				{
+					DescriptionHeading = DescriptionHeading.TechnicalSkills,
+					DescriptionText = @"Well versed in working with Linux, Windows operating systems on PC and Servers, as well as Office 2016 and 2019.",
+					DescriptionIdMaster = new Guid()
+				},
+				new Description
+				{
+					DescriptionHeading = DescriptionHeading.TechnicalSkills,
+					DescriptionText = @"Skilled at working with web services of SOAP, JSON and XML.",
+					DescriptionIdMaster = new Guid()
+				},
+				new Description
+				{
+					DescriptionHeading = DescriptionHeading.TechnicalSkills,
+					DescriptionText = @"Knowledge of Angular 6+, TypeScript, React and DevExtreme (DevExpress Web).",
+					DescriptionIdMaster = new Guid()
+				},
+				new Description
+				{
+					DescriptionHeading = DescriptionHeading.TechnicalSkills,
+					DescriptionText = @"Knowledge of AWS EC2, AWS CloudFormation, AWS S3, AWS Elastic Beanstalk, AWS RDS, AWS Route 53, Scrum, RDBMS, MySQL.",
+					DescriptionIdMaster = new Guid()
+				},
+				new Description
+				{
+					DescriptionHeading = DescriptionHeading.TechnicalSkills,
+					DescriptionText = @"Knowledge of Google Maps API, Twilio API",
+					DescriptionIdMaster = new Guid()
+				}
+			}
 		};
 
 		public static List<MyJobsPage> MyJobsInfo = new()
@@ -156,6 +156,85 @@ namespace PortfolioAndBlog.Data
 				InfoHeading = "WORK EXPERIENCE",
 				Jobs = new List<Job>
 				{
+					new Job
+					{
+						Id =  new Guid("663a1191-5ac4-4822-9455-656c01b13ddc"),
+						DescriptionHeading = DescriptionHeading.WorkExperience,
+						JobTitle =  "C# Developer",
+						Company = "Buddy's Home Furnishing",
+						LocationCompany = "Tampa, FL",
+						DateStarted = new DateTime(2021,10,01),
+						DateFinished = DateTime.Now,
+						//DateFinished = new DateTime(),
+						Descriptions = new List<Description>
+						{							
+							new Description
+							{
+								Id = new Guid(),
+								DescriptionHeading = DescriptionHeading.WorkExperience,
+								DescriptionText = @"Developed a .Net 6 Blazor Server Website to use it as a tool for Zipping and copying 
+								released projects for deployment. It increases the company developer team a 85% of productivity by going
+								from 5 minutes to 1 minute of work.",
+								DescriptionIdMaster = new Guid("663a1191-5ac4-4822-9455-656c01b13ddc")
+							},
+							new Description
+							{
+								Id = new Guid(),
+								DescriptionHeading = DescriptionHeading.WorkExperience,
+								DescriptionText = @"Search and implement Reflection on class properties to find the value and compare
+								them to another class",
+								DescriptionIdMaster = new Guid("663a1191-5ac4-4822-9455-656c01b13ddc")
+							},
+							new Description
+							{
+								Id = new Guid(),
+								DescriptionHeading = DescriptionHeading.WorkExperience,
+								DescriptionText = @"Develop code per detailed specifications using C# and Blazor framework, tools, and techniques
+				under the direction of the project manager or team leader.",
+								DescriptionIdMaster = new Guid("663a1191-5ac4-4822-9455-656c01b13ddc")
+							},
+							new Description
+							{
+								Id = new Guid(),
+								DescriptionHeading = DescriptionHeading.WorkExperience,
+								DescriptionText = @"Developing software components with other developers on the team using Azure DevOps (TFS)
+				for committing my changes.",
+								DescriptionIdMaster = new Guid("663a1191-5ac4-4822-9455-656c01b13ddc")
+							},
+							new Description
+							{
+								Id = new Guid(),
+								DescriptionHeading = DescriptionHeading.WorkExperience,
+								DescriptionText = @"Worked on small assigned tasks via Jira.",
+								DescriptionIdMaster = new Guid("663a1191-5ac4-4822-9455-656c01b13ddc")
+							},
+							new Description
+							{
+								Id = new Guid(),
+								DescriptionHeading = DescriptionHeading.WorkExperience,
+								DescriptionText = @"Investigated, debugged and fixed applications problems reported by quality assurance department to ensure optimal
+				development environment.",
+								DescriptionIdMaster = new Guid("663a1191-5ac4-4822-9455-656c01b13ddc")
+							},
+							new Description
+							{
+								Id = new Guid(),
+								DescriptionHeading = DescriptionHeading.WorkExperience,
+								DescriptionText = @"Worked with SQL server stored procedures created by the DBA, understanding the process
+								inside those stored procedures.",
+								DescriptionIdMaster = new Guid("663a1191-5ac4-4822-9455-656c01b13ddc")
+							},
+							new Description
+							{
+								Id = new Guid(),
+								DescriptionHeading = DescriptionHeading.WorkExperience,
+								DescriptionText = @"Use in house tool to work with the database to create, edit, and delete data using the 
+								stored procedures.",
+								DescriptionIdMaster = new Guid("663a1191-5ac4-4822-9455-656c01b13ddc")
+							}
+						}
+
+					},
 					new Job
 					{
 						Id =  new Guid("4756a1c0-d3ce-4cb0-af5d-bea9ee007f4b"),
@@ -258,7 +337,7 @@ namespace PortfolioAndBlog.Data
 								Id = new Guid(),
 								DescriptionHeading = DescriptionHeading.WorkExperience,
 								DescriptionText = @"Develop code per detailed specifications using specified programming languages, tools, and techniques
-                under the direction of the project manager or team leader.",
+				under the direction of the project manager or team leader.",
 								DescriptionIdMaster = new Guid("9b68a968-3343-4556-9472-bf627cfd3a46")
 							},
 							new Description
@@ -266,7 +345,7 @@ namespace PortfolioAndBlog.Data
 								Id = new Guid(),
 								DescriptionHeading = DescriptionHeading.WorkExperience,
 								DescriptionText = @"Developing software components of the solution with other developers on the team using Azure DevOps (TFS)
-                for committing my changes.",
+				for committing my changes.",
 								DescriptionIdMaster = new Guid("9b68a968-3343-4556-9472-bf627cfd3a46")
 							},
 							new Description
@@ -281,7 +360,7 @@ namespace PortfolioAndBlog.Data
 								Id = new Guid(),
 								DescriptionHeading = DescriptionHeading.WorkExperience,
 								DescriptionText = @"Investigated, debugged and fixed applications problems reported by quality assurance to ensure optimal
-                development environment.",
+				development environment.",
 								DescriptionIdMaster = new Guid("9b68a968-3343-4556-9472-bf627cfd3a46")
 							},
 							new Description
@@ -317,7 +396,7 @@ namespace PortfolioAndBlog.Data
 								Id = new Guid(),
 								DescriptionHeading = DescriptionHeading.WorkExperience,
 								DescriptionText = @"Boosted the productivity of the Collection Department by 85% daily by creating a Win Forms C# app where
-                they search a customer account, export the information to a PDF, and mailing it.",
+				they search a customer account, export the information to a PDF, and mailing it.",
 								DescriptionIdMaster = new Guid("152550f3-f7e9-4a73-ba69-ee9cbce0534b")
 							},
 							new Description
@@ -325,7 +404,7 @@ namespace PortfolioAndBlog.Data
 								Id = new Guid(),
 								DescriptionHeading = DescriptionHeading.WorkExperience,
 								DescriptionText = @"Developed an ASP.NET MVC website using Entity Framework where the user can search and merge two accounts
-                based on the user criteria, improved user productivity by 35%, and company database storage space by a 57%.",
+				based on the user criteria, improved user productivity by 35%, and company database storage space by a 57%.",
 								DescriptionIdMaster = new Guid("152550f3-f7e9-4a73-ba69-ee9cbce0534b")
 							},
 							new Description
@@ -333,8 +412,8 @@ namespace PortfolioAndBlog.Data
 								Id = new Guid(),
 								DescriptionHeading = DescriptionHeading.WorkExperience,
 								DescriptionText = @"Developed an ASP.NET MVC website using Entity Framework where the user searches for a range of accounts,
-                and it calculates the rating using an existing .Net library, allowing the user to update them in bulk,
-                saving user’s time by a 73%. Also, executed the deployment into their IIS Server",
+				and it calculates the rating using an existing .Net library, allowing the user to update them in bulk,
+				saving user’s time by a 73%. Also, executed the deployment into their IIS Server",
 								DescriptionIdMaster = new Guid("152550f3-f7e9-4a73-ba69-ee9cbce0534b")
 							},
 							new Description
@@ -342,7 +421,7 @@ namespace PortfolioAndBlog.Data
 								Id = new Guid(),
 								DescriptionHeading = DescriptionHeading.WorkExperience,
 								DescriptionText = @"Maximized the IT personnel 25 minutes every month by Developing a monthly Task on a C# console application
-                where search and copy PDF files from one location to another.",
+				where search and copy PDF files from one location to another.",
 								DescriptionIdMaster = new Guid("152550f3-f7e9-4a73-ba69-ee9cbce0534b")
 							},
 							new Description
@@ -357,9 +436,9 @@ namespace PortfolioAndBlog.Data
 								Id = new Guid(),
 								DescriptionHeading = DescriptionHeading.WorkExperience,
 								DescriptionText = @"Developed a Win Forms app in C# that increase productivity by 45% by allowing the IT Department to add,
-                modify, and search printer’s information on a SQL Server using ADO.NET.
-                Developed a program in C# allowing the IT Department to resolve regular open tickets, it increases their
-                productivity by 55%.",
+				modify, and search printer’s information on a SQL Server using ADO.NET.
+				Developed a program in C# allowing the IT Department to resolve regular open tickets, it increases their
+				productivity by 55%.",
 								DescriptionIdMaster = new Guid("152550f3-f7e9-4a73-ba69-ee9cbce0534b")
 							}
 						}
@@ -375,6 +454,133 @@ namespace PortfolioAndBlog.Data
 			//	HeadingPart2 = "Work",
 			//	InfoHeading = "SKILLS"
 			//}
+		};
+
+		public static MyProjectsPage MyProjectsInfo = new()
+		{			
+			Id = new Guid("56fd592e-8a49-41cb-a402-7accd9f35822"),
+			HeadingPart1 = "My",
+			HeadingPart2 = "Projects",
+			InfoHeading = "Check some of my Projects...",
+			Projects = new List<MyProject>
+			{
+				new MyProject
+				{
+					Id = new Guid("1eee4c77-f255-46c7-b3a1-946090201c5e"),
+					ProjectNameDescription = "Rating System .Net Core MVC",
+					ProjectName = "Rating Systems",
+					ProjectPicturePath = "img/projects/RatingSystem.gif",
+					ProjectDescriptions = new Description
+					{
+						Id = new Guid(),
+						DescriptionHeading = DescriptionHeading.Projects,
+						DescriptionText = @"An MVC website project using ASP.NET Framework where it searches on
+							the database using Entity Framework for a range of accounts, calculate
+							the rating using a library created by another developer and shows on a
+							table information retrieved, once the user updates the rating the
+							application will write back to another table, i also was in charge of
+							deployment to the IIS Server.",
+						DescriptionIdMaster = new Guid("1eee4c77-f255-46c7-b3a1-946090201c5e")
+					}
+				},
+				new MyProject
+				{
+					Id = new Guid("0a8ecf5d-22f0-47ac-8b39-12786581f69f"),
+					ProjectNameDescription = "Unzip WinForm",
+					ProjectName = "Walz UnZip",
+					ProjectPicturePath = "img/projects/WalzUnzip.gif",
+					ProjectDescriptions = new Description
+					{
+						Id = new Guid(),
+						DescriptionHeading = DescriptionHeading.Projects,
+						DescriptionText = @"An windows forms on C# and .Net Framework where users can see, select,
+						and extract a zip file into their local or Domain user Desktop on
+						their machine or server from a list of zip files within a network
+						location.",
+						DescriptionIdMaster = new Guid("0a8ecf5d-22f0-47ac-8b39-12786581f69f")
+					}
+				},
+				new MyProject
+				{
+					Id = new Guid("cbeca9e2-f40f-4202-859a-99a36085f4ca"),
+					ProjectNameDescription = "Mail Merge Win Form",
+					ProjectName = "Mail Merge",
+					ProjectPicturePath = "img/projects/MailMerge.gif",
+					ProjectDescriptions = new Description
+					{
+						Id = new Guid(),
+						DescriptionHeading = DescriptionHeading.Projects,
+						DescriptionText = @"A visual interface program in C# that increase users productivity by
+						55% by letting the users create spreadsheets base on accounts or
+						dealers from a database and save it automatically on an spreadsheet,
+						so other user can create a mail merge document and print them.",
+						DescriptionIdMaster = new Guid("cbeca9e2-f40f-4202-859a-99a36085f4ca")
+					}
+				},
+				new MyProject
+				{
+					Id = new Guid("6fa55c13-0937-45c9-b23b-a0bbbc4fd34b"),
+					ProjectNameDescription = "SQL Search Win Form",
+					ProjectName = "SQL Search",
+					ProjectPicturePath = "img/projects/gifForGitHub.gif",
+					ProjectDescriptions = new Description
+					{
+						Id = new Guid(),
+						DescriptionHeading = DescriptionHeading.Projects,
+						DescriptionText = @"A program in C# allowing the IT Department to resolve regular open
+						tickets, it increases their productivity by 45%",
+						DescriptionIdMaster = new Guid("6fa55c13-0937-45c9-b23b-a0bbbc4fd34b")
+					}
+				},
+				new MyProject
+				{
+					Id = new Guid("46975288-5ee1-4fbb-b97e-bb300c61883d"),
+					ProjectNameDescription = "Company Directory .Net MVC",
+					ProjectName = "Company Directory",
+					ProjectPicturePath = "img/projects/CompanyDirectory.gif",
+					ProjectDescriptions = new Description
+					{
+						Id = new Guid(),
+						DescriptionHeading = DescriptionHeading.Projects,
+						DescriptionText = @"Increase company user’s searches by 30% by developing an ASP.NET
+						website where it searches for Windows Active Directory Users and
+						update a DataGrid with the information obtained so users can look for
+						any employee on the Intranet.",
+						DescriptionIdMaster = new Guid("46975288-5ee1-4fbb-b97e-bb300c61883d")
+					}
+				},
+				new MyProject
+				{
+					Id = new Guid("35295d7f-5bc9-49c7-837d-bcf9246b370b"),
+					ProjectNameDescription = "Admin Win Form",
+					ProjectName = "Admin",
+					ProjectPicturePath = "img/projects/Admin.gif",
+					ProjectDescriptions = new Description
+					{
+						Id = new Guid(),
+						DescriptionHeading = DescriptionHeading.Projects,
+						DescriptionText = @"A visual interface program in C# allowing the Collection Department to
+						search an account and based on the State, creates a PDF with the
+						customer information, with option of print it, this increase their
+						productivity by 85% daily.",
+						DescriptionIdMaster = new Guid("35295d7f-5bc9-49c7-837d-bcf9246b370b")
+					}
+				},
+				new MyProject
+				{
+					Id = new Guid("8f785f8e-1214-4f2a-b41b-8fc6790f6aa1"),
+					ProjectNameDescription = "Others Projects",
+					ProjectName = "Others Projects",
+					ProjectPicturePath = "img/projects/otherProjects.jpg",
+					ProjectDescriptions = new Description
+					{
+						Id = new Guid(),
+						DescriptionHeading = DescriptionHeading.Projects,
+						DescriptionText = @"Others Projects have been created and will be added later.",
+						DescriptionIdMaster = new Guid("8f785f8e-1214-4f2a-b41b-8fc6790f6aa1")
+					}
+				},
+			}
 		};
 	}
 }

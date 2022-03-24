@@ -143,8 +143,17 @@ h3 {
     font-style: italic;
 }
 
-/*Media Screen*/
+.modal-header,
+.modal-footer {
+    background-color: #3c176b;
+    color: white;
+}
 
+.btn-close {
+   /* color: white !important;*/
+    background-color: white;
+}
+/*Media Screen*/
 /*Small Screen ???*/
 @media screen and (max-width: 900px) {
     main {

@@ -1,23 +1,16 @@
 ﻿@using PortfolioAndBlog.Models
 <div class="modal fade show" id="myModal" style="display:block; background-color: rgba(10,10,10,.8);" 
      aria-modal="true" role="dialog">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">
-                    @MyJob.JobTitle -
-                    <br /> 
-                    @MyJob.Company</h4>
+                    Picture of @Project.ProjectName
+                </h4>
                 <button type="button" class="btn-close" aria-label="Close" @onclick="@ModalCancel"></button>
             </div>
             <div class="modal-body">
-                <span class="text-white">@MyJob.JobTitle , @MyJob.Company , @MyJob.LocationCompany</span>
-				<ul>
-                    @foreach (Description desc in MyJob.Descriptions)
-                   {
-                       <li>@desc.DescriptionText</li>
-                   }
-                </ul>               
+                <img class="img-fluid" src="@Project.ProjectPicturePath" alt="Project @Project.ProjectNameDescription" />  
             </div>
             <div class="modal-footer">
                 @switch (DialogType)
@@ -42,13 +35,7 @@
 
 @code {
     [Parameter]
-    public string Title { get; set; }
-
-    [Parameter]
-    public string Text { get; set; }
-
-    [Parameter]
-    public Job MyJob { get; set; }
+    public MyProject Project { get; set; }
 
     [Parameter]
     public ModalDialogType DialogType { get; set; }

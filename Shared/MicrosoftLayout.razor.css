@@ -37,7 +37,19 @@ main {
         }
 .top-color {
     background-color: #3d255b;
+    border-bottom: 1px solid #3d255b;
 }
+
+.layout-link {
+    text-decoration: none;
+    color: white;
+}
+
+    .layout-link:hover {
+        color: white;
+        cursor: pointer;
+        text-decoration: underline;
+    }
 
 @media (max-width: 640.98px) {
     .top-row:not(.auth) {

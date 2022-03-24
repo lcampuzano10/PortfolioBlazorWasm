@@ -2,7 +2,7 @@
 <div class="job job-2">
 	<h3 class="topHead">@Skill.DescriptionHeading.GetDisplayName().ToUpper()</h3>  
 	<ul  class="text-white">
-		@foreach (Description descr in Skill.Descriptions.Take(4))
+		@foreach (Description descr in Skill.Descriptions.Take(6))
 		{
 			<li>@descr.DescriptionText</li> 
 		}
@@ -12,11 +12,11 @@
 
 @if (SkillsDialogOpen)
 {
-    <SkillsDialogComponent 
-                 DialogType = "Models.ModalDialogType.Ok"
+	<SkillsDialogComponent 
+				 DialogType = "Models.ModalDialogType.Ok"
 				 Skill = "Skill"
-                 OnClose="@OnDialogClose">
-    </SkillsDialogComponent>
+				 OnClose="@OnDialogClose">
+	</SkillsDialogComponent>
 }
 
 @code {
@@ -35,7 +35,7 @@
 	private void OpenJobDialog()
 	{	
 		SkillsDialogOpen = true;
-        StateHasChanged();
-    }
+		StateHasChanged();
+	}
 
 }
