@@ -1,4 +1,4 @@
-using Blazored.Modal;
+//using Blazored.Modal;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using PortfolioAndBlog;
