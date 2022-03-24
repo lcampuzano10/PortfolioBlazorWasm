@@ -10,6 +10,6 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 //Blazored Dialog
-builder.Services.AddBlazoredModal();
+//builder.Services.AddBlazoredModal();
 
 await builder.Build().RunAsync();

@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@using PortfolioAndBlog.Components
 
 <div class="page">
     <div class="sidebar">
@@ -8,7 +9,7 @@
     <main class="img-wrap">
        <div class="top-row px-4 top-color">
             @*<button>Switch color</button>*@
-           <a class="layout-link" href="/">About this Project</a>
+           <a class="layout-link" @onclick="() => OpenThisAppDialog()" >About this Project</a>
         </div>
 
         <article class="content px-4 ">
@@ -27,9 +28,17 @@
 
 @*<BlazoredModal />*@
 
+@if (ThisAppDialogOpen)
+{
+	<ThisAppInfoDialog DialogType = "Models.ModalDialogType.Ok"
+				 OnClose="@OnDialogClose">
+	</ThisAppInfoDialog>
+}
+
 @code {
     //private int _thisYear;
     private string _showYear;
+    public bool ThisAppDialogOpen { get; set; }
 
     protected override void OnInitialized()
     {
@@ -40,5 +49,17 @@
             _showYear = $" - {thisYear}";
         }
     }
+
+    private void OnDialogClose(bool accepted)
+	{
+		ThisAppDialogOpen = false;
+		StateHasChanged();
+	}
+
+	private void OpenThisAppDialog()
+	{
+		ThisAppDialogOpen = true;
+		StateHasChanged();
+	}
 
 }
