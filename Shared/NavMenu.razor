@@ -19,23 +19,23 @@
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/aboutmecode" Match="NavLinkMatch.All">
+            <NavLink class="nav-link" href="/aboutmecode" Match="NavLinkMatch.Prefix">
                 <span class="oi oi-home" aria-hidden="true"></span> About Me
             </NavLink>
         </div>
         
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/myjobscode" Match="NavLinkMatch.All">
+            <NavLink class="nav-link" href="/myjobscode" Match="NavLinkMatch.Prefix">
                 <span class="oi oi-person" aria-hidden="true"></span> Work Experience
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/myprojectscode" Match="NavLinkMatch.All">
+            <NavLink class="nav-link" href="/myprojectscode" Match="NavLinkMatch.Prefix">
                 <span class="oi oi-project" aria-hidden="true"></span> My Projects
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/contact" Match="NavLinkMatch.All">
+            <NavLink class="nav-link" href="/contact" Match="NavLinkMatch.Prefix">
                 <span class="oi oi-envelope-closed" aria-hidden="true"></span> How To Reach Me
             </NavLink>
         </div>
@@ -53,7 +53,8 @@
 
     protected override void OnInitialized()
     {
-        Env = HostEnvironment.Environment;   
+        Env = HostEnvironment.Environment;
+        Console.WriteLine(Env);
     }
 
     private void ToggleNavMenu()
