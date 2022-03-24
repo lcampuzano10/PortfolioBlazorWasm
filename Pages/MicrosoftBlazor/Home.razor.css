@@ -1,0 +1,26 @@
+﻿a {
+	color: #fff;
+	text-decoration: none;
+}
+/*
+.button-lc {
+    background-color: #761aee;
+    border-color: #761aee;
+}
+
+.text-lc-secondary {
+    color: #761aee;
+}*/
+
+main .icons {
+	margin-top: 1rem;
+}
+
+	main .icons a {
+		padding: 0.4rem;
+	}
+
+		main .icons a:hover {
+			color: #761aee;
+			transition: all 0.5s ease-out;
+		}

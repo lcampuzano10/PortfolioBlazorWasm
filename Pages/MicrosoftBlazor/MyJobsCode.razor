@@ -7,22 +7,27 @@
 	<div class="about-info">
 		@if (MyJobsInfo is not null)
 		{
-			@foreach(var (jobs, index) in MyJobsInfo.Select((value, i) => (value, i)))
+			@foreach (var (jobs, index) in MyJobsInfo.Select((value, i) => (value, i)))
 			{
-				<JobsComponent MyJobs="jobs" />	
+				<JobsComponent MyJobs="jobs" />
 			}
 		}
 		@if (SkillInfo is not null)
-	    {
-		   <SkillsComponent Skill="SkillInfo" />
-	    }
+		{
+			<SkillsComponent Skill="SkillInfo" />
+		}
 
 		@if (EducationInfo is not null)
-	    {
-			<EducationComponent EducationInfo="EducationInfo" />   
-	    }
+		{
+			<EducationComponent EducationInfo="EducationInfo" />
+		}
 	</div>
 </div>
+
+@*<div>
+	<button type="button" class="btn btn-primary btn-sm">Open Dialog</button>
+</div>
+*@
 
 @code {
 

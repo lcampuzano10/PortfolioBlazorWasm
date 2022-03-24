@@ -24,6 +24,9 @@
                 color: #000;
             }
 
+.text-lc-secondary-contact {
+    color: #3d1570;
+}
 .locationDiv {
     display: grid;
     padding-top: 20px;

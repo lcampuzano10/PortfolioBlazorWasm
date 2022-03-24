@@ -35,6 +35,9 @@ main {
             overflow: hidden;
             text-overflow: ellipsis;
         }
+.top-color {
+    background-color: #3d255b;
+}
 
 @media (max-width: 640.98px) {
     .top-row:not(.auth) {
