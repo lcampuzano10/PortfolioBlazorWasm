@@ -62,3 +62,151 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+/*MY CODE*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #444 !important;
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+/*Link for the background-image opacity: 
+    https://www.digitalocean.com/community/tutorials/how-to-change-a-css-background-images-opacity
+*/
+.img-wrap {
+    position: relative;
+}
+
+    .img-wrap:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        /*height: 100vh;*/
+        opacity: 0.3;
+        background-image: url('./../img/background.jpg');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+    }
+
+.page-content {
+    position: relative;
+}
+
+.button-lc {
+    background-color: #55278f;
+    border-color: #3d1570;
+}
+
+.text-lc-secondary {
+    color: #55278f;
+    /*color: #3d1570;*/
+}
+.text-lc-white {
+    color: #fff;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+    h1.lg-heading,
+    h2.lg-heading,
+    h3.lg-heading {
+        font-size: 6rem;
+        color: #fff;
+    }
+
+    h1.sm-heading,
+    h2.sm-heading,
+    h3.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(73, 73, 73, 0.5);
+        color: #fff;
+    }
+
+.workedDate {
+    font-style: italic;
+}
+
+.modal-header,
+.modal-footer {
+    background-color: #3c176b;
+    color: white;
+}
+
+.btn-close {
+   /* color: white !important;*/
+    background-color: white;
+}
+/*Media Screen*/
+/*Small Screen ???*/
+@media screen and (max-width: 900px) {
+    main {
+        align-items: center;
+        text-align: center;
+    }
+
+    h1.lg-heading {
+        line-height: 1;
+        margin-bottom: 1rem;
+        font-size: 4rem;
+    }
+
+    .img-wrap:before {
+        width: 100%;
+        height: 120vh;
+    }
+}
+
+/*Big Screen ??*/
+@media (min-width: 641px) {
+    /*main {
+        align-items: center;
+        text-align: center;
+    }
+
+        h1.lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }*/
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
