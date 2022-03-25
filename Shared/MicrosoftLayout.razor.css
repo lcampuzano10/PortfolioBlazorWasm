@@ -51,20 +51,42 @@ main {
         text-decoration: underline;
     }
 
-@media (max-width: 640.98px) {
-    .top-row:not(.auth) {
-        display: none;
+/*Small Screen ???*/
+@media screen and (max-width: 900px) {
+    .top-row {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+        .top-row:not(.auth) {
+            display: flex;
+        }
+
+        .top-row.auth {
+            justify-content: space-between;
+        }
+
+        .top-row ::deep a, .top-row ::deep .btn-link {
+            margin-left: 0;
+        }
+
+    .layout-link {
+        text-decoration: blink;
+        color: white;
     }
 
-    .top-row.auth {
-        justify-content: space-between;
-    }
-
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        margin-left: 0;
+    .footer {
+        /*position: sticky;*/
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        line-height: 60px; /* Vertically center the text there */
     }
 }
 
+/*Big Screen ??*/
 @media (min-width: 641px) {
     .page {
         flex-direction: row;
@@ -93,8 +115,4 @@ main {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
-
-  /*  .sticky-footer{
-        position: sticky;
-    }*/
 }

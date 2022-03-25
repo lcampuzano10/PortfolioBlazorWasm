@@ -1,6 +1,9 @@
 ﻿@using PortfolioAndBlog.Models
 <div class="job job-1">
 	<h3 class="topHead">@MyJobs.InfoHeading</h3>  
+	<div class="info-text-link text-warning">
+        <span>(This list is clickable, it will show you the descriptions)</span>
+    </div>
 	<ul class="text-white mt-1">
 		@foreach (Job job in MyJobs.Jobs.OrderByDescending(d => d.DateFinished))
 		{

@@ -12,6 +12,10 @@
     color: #761aee;
 }*/
 
+.page {
+    height: 100vh;
+}
+
 main .icons {
 	margin-top: 1rem;
 }
@@ -24,3 +28,33 @@ main .icons {
 			color: #761aee;
 			transition: all 0.5s ease-out;
 		}
+
+/*Small Screen ???*/
+@media screen and (max-width: 900px) {
+ 
+    /*.lg-heading {
+        margin-left: 5px;
+    }*/
+	/*main {
+        align-items: center;
+        text-align: center;
+    }
+
+        main .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }*/
+}
+
+/*Big Screen ??*/
+@media (min-width: 641px) {
+	/*  main {
+        align-items: center;
+        text-align: center;
+    }
+
+        div .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }*/
+}

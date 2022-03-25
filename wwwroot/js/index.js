@@ -1,39 +1,45 @@
-﻿//// Select DOM Items
-//const menuBtn = document.querySelector(".container");
-//const menu = document.querySelector(".menu");
-//const menuNav = document.querySelector(".menu-nav");
-//const menuBranding = document.querySelector(".menu-branding");
-//const navItems = document.querySelectorAll(".nav-item");
+﻿window.onscroll = function () { scrollFunction() };
 
-//////Set initial State of Menu
-////let showMenu = false;
+function scrollFunc() {
+    // Set a variable for our button element.
+    const scrollToTopButton = document.getElementById('js-top');
 
-////menuBtn.addEventListener("click", toggleMenu);
+    if (scrollToTopButton != null)
+    {
+        // Get the current scroll value
+        let y = document.body.scrollTop;
+        //let y = window.scrollY;
 
-////function toggleMenu() {
-////    if (!showMenu) {
-////        menuBtn.classList.add("close");
-////        menu.classList.add("show");
-////        menuNav.classList.add("show");
-////        menuBranding.classList.add("show");
-////        navItems.forEach(item => item.classList.add("show"));
+        // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
+        if (y > 0) {
+            //scrollToTopButton.style.display = "inline-flex;";
+            scrollToTopButton.className = "top-link show";
+        }
+        else {
+            //scrollToTopButton.style.display = "none";
+            scrollToTopButton.className = "top-link hide";
+        }
+	}
+}
 
-////        //Set menu State
-////        showMenu = true;
-////    } else {
-////        menuBtn.classList.remove("close");
-////        menu.classList.remove("show");
-////        menuNav.classList.remove("show");
-////        menuBranding.classList.remove("show");
-////        navItems.forEach(item => item.classList.remove("show"));
+function scrollFunction() {
+    const scrollToTopButton = document.getElementById('js-top');
 
-////        //Set menu State
-////        showMenu = false;
-////    }
-////}
+    if (scrollToTopButton != null)
+    {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //scrollToTopButton.style.display = "inline-flex;";
+            scrollToTopButton.className = "top-link show";
+        } else {
+            //scrollToTopButton.style.display = "none";
+            scrollToTopButton.className = "top-link hide";
+        }
+	}
 
-//var dateToday = new Date().getFullYear();
-//if (dateToday > 2020) {
-//    document.getElementById("dateCurrent").innerHTML = "- " + dateToday;
-//    console.log(dateToday);
-//}
+    
+}
+
+// When the user clicks the button, the page scrolls to the top
+function OnScrollEvent() {
+    document.documentElement.scrollTop = 0;
+}
