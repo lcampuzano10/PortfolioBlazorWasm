@@ -1,6 +1,5 @@
 ﻿@using System.Reflection
 @using System.Runtime.Versioning
-@using Entities.Models
 
 <div class="card" style="width: 100%;">
   <div class="card-header text-center">
@@ -11,7 +10,6 @@
 	<li class="list-group-item"><span class="fw-bold">Assembly Name:</span> @AssemblyName</li>
 	<li class="list-group-item"><span class="fw-bold">Framework:</span> @FrameworkAttribute</li>
 	<li class="list-group-item"><span class="fw-bold">Using:</span> @WebAssembly</li>
-	<li class="list-group-item"><span class="fw-bold">Creator:</span> @Contact.FullName</li>
   </ul>
 </div>
 
@@ -31,7 +29,6 @@
 	#endregion fields
 
 	#region Properties
-	public Contact Contact { get; set; }
 	#endregion
 
 	protected override void OnInitialized()
