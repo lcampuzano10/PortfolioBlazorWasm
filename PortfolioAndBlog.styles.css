@@ -508,6 +508,9 @@ main .icons[b-rji7zd24u3] {
 
 /*Small Screen ???*/
 @media screen and (max-width: 900px) {
+	.text-lc-secondary[b-rji7zd24u3] {
+		font-size: 3.8rem
+	}
 	/*.heading-separator {
 		display: grid;
 		padding-top: 50px;
