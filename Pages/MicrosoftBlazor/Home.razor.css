@@ -31,6 +31,9 @@ main .icons {
 
 /*Small Screen ???*/
 @media screen and (max-width: 900px) {
+	.text-lc-secondary {
+		font-size: 3.8rem
+	}
 	/*.heading-separator {
 		display: grid;
 		padding-top: 50px;
