@@ -1,0 +1,53 @@
+﻿@using PortfolioAndBlog.Models
+<div class="job job-1">
+	<h3 class="topHead">@MyJobs.InfoHeading</h3>  
+	<div class="info-text-link text-warning">
+        <span>(This list is clickable, it will show you the descriptions)</span>
+    </div>
+	<ul class="text-white mt-1">
+		@foreach (Job job in MyJobs.Jobs.OrderByDescending(d => d.DateFinished))
+		{
+			<li class="mb-2">
+				<a class="job-link" @onclick="() => OpenJobDialog(job.Id)"><span>@job.JobTitle , 
+					@job.Company , 
+					@job.LocationCompany</span>
+				<br />
+				<span class="workedDate">@job.DateStarted.ToString("Y") – 
+							@((job.DateFinished.Year < DateTime.Now.Year) ? job.DateFinished.ToString("Y") 	: "Current")</span>
+				</a>
+			</li>			
+		}
+	</ul>
+</div>
+
+@if (JobsDialogOpen)
+{
+	<JobsDialog DialogType = "Models.ModalDialogType.Ok"
+				 MyJob= "SelectedJob"
+				 OnClose="@OnDialogClose">
+	</JobsDialog>
+}
+
+@code {
+
+	[Parameter]
+	public MyJobsPage? MyJobs { get; set; }
+
+	public Job? SelectedJob { get; set; }
+
+	public bool JobsDialogOpen { get; set; }
+
+	private void OnDialogClose(bool accepted)
+	{
+		JobsDialogOpen = false;
+		StateHasChanged();
+	}
+
+	private void OpenJobDialog(Guid id)
+	{
+		var findJob = MyJobs.Jobs.Where(j => j.Id == id).FirstOrDefault();
+		SelectedJob = findJob;
+		JobsDialogOpen = true;
+		StateHasChanged();
+	}
+}

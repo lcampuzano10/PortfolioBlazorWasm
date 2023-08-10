@@ -1,0 +1,66 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+	<div class="sidebar">
+		<NavMenu />
+	</div>
+
+	<main class="img-wrap">
+	   <div class="top-row px-4 top-color">
+			@*<button>Switch color</button>*@
+		   <a class="layout-link" @onclick="() => OpenThisAppDialog()" >About this Project</a>
+		</div>
+
+		<article class="content px-4 mb-2">
+			<div class="page-content">
+				@Body
+			</div>
+		</article>
+	</main>	
+</div>
+
+<footer class="sticky-footer footer mt-auto bg-light text-center">
+	<span class="text-muted">Copyright &copy; 2020 @_showYear</span>
+	@*<div class="text-center">
+		
+	</div>*@
+</footer>
+
+
+@*<BlazoredModal />*@
+
+@if (ThisAppDialogOpen)
+{
+	<ThisAppInfoDialog DialogType = "Models.ModalDialogType.Ok"
+				 OnClose="@OnDialogClose">
+	</ThisAppInfoDialog>
+}
+
+@code {
+	//private int _thisYear;
+	private string _showYear;
+	public bool ThisAppDialogOpen { get; set; }
+
+	protected override void OnInitialized()
+	{
+		int thisYear = DateTime.Today.Year;
+
+		if (thisYear > 2020)
+		{
+			_showYear = $" - {thisYear}";
+		}
+	}
+
+	private void OnDialogClose(bool accepted)
+	{
+		ThisAppDialogOpen = false;
+		StateHasChanged();
+	}
+
+	private void OpenThisAppDialog()
+	{
+		ThisAppDialogOpen = true;
+		StateHasChanged();
+	}
+
+}

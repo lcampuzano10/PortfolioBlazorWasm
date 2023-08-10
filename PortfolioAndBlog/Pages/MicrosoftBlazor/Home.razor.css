@@ -1,0 +1,79 @@
+﻿a {
+	color: #fff;
+	text-decoration: none;
+}
+/*
+.button-lc {
+	background-color: #761aee;
+	border-color: #761aee;
+}
+
+.text-lc-secondary {
+	color: #761aee;
+}*/
+
+.page {
+	height: 100vh;
+}
+
+main .icons {
+	margin-top: 1rem;
+}
+
+	main .icons a {
+		padding: 0.4rem;
+	}
+
+		main .icons a:hover {
+			color: #761aee;
+			transition: all 0.5s ease-out;
+		}
+
+/*Small Screen ???*/
+@media screen and (max-width: 900px) {
+	h1.lg-heading {
+		font-size: 3.5rem;
+	}
+	/*.heading-separator {
+		display: grid;
+		padding-top: 50px;
+		grid-gap: 1px;
+		grid-template-areas: "separator1"
+			"separator2"*/
+			/*"job1 job2 job3"*/
+			/*;
+		grid-template-columns: 1fr;
+	}
+		.heading-separator .separator1 {
+			grid-area: separator1;
+		}
+
+		.heading-separator .separator2 {
+			grid-area: location2;
+		}*/
+	/*.lg-heading {
+		margin-left: 5px;
+	}*/
+	/*main {
+		align-items: center;
+		text-align: center;
+	}
+
+		main .lg-heading {
+			line-height: 1;
+			margin-bottom: 1rem;
+		}*/
+}
+
+/*Big Screen ??*/
+@media (min-width: 641px) {
+	/*  main {
+		align-items: center;
+		text-align: center;
+	}
+
+		div .lg-heading {
+			line-height: 1;
+			margin-bottom: 1rem;
+		}*/
+}

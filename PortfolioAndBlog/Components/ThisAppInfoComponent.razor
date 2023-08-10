@@ -1,0 +1,66 @@
+﻿@using System.Reflection
+@using System.Runtime.Versioning
+
+<div class="card" style="width: 100%;">
+  <div class="card-header text-center">
+		<span class="text-uppercase fs-3">Info about this Project</span>
+  </div>
+  <ul class="list-group list-group-flush">
+	<li class="list-group-item"><span class="fw-bold">Build Number:</span> @CoreBuildNumber</li>
+	<li class="list-group-item"><span class="fw-bold">Assembly Name:</span> @AssemblyName</li>
+	<li class="list-group-item"><span class="fw-bold">Framework:</span> @FrameworkAttribute</li>
+	<li class="list-group-item"><span class="fw-bold">Using:</span> @WebAssembly</li>
+  </ul>
+</div>
+
+@code {
+	[Inject]
+	protected IJSRuntime jsRuntime { get; set; }
+
+	[CascadingParameter]
+	public Error Error { get; set; }
+
+
+	#region fields
+	public String CoreBuildNumber { get; set; }
+	public String AssemblyName { get; set; }
+	public String FrameworkAttribute { get; set; }
+	public String WebAssembly { get; set; }
+	#endregion fields
+
+	#region Properties
+	#endregion
+
+	protected override void OnInitialized()
+	{
+		try
+		{
+			// Get Assembly Data
+			Assembly coreAssembly = Assembly.GetExecutingAssembly();
+
+			var getName = coreAssembly.GetName();
+			var listOfAttributes = coreAssembly.GetCustomAttributes(true);
+			var attribute = listOfAttributes.OfType<TargetFrameworkAttribute>().First();
+			var isWebAssembly = this.jsRuntime is IJSInProcessRuntime;
+			Version coreVersion = coreAssembly.GetName().Version;
+			String codeVer = coreVersion.Major.ToString() + "." + coreVersion.Minor.ToString() + "." + coreVersion.Build.ToString() + "." + coreVersion.Revision.ToString();
+			String assemblyName = coreAssembly.GetName().Name;
+
+			//FileInfo coreFileInfo = new(coreAssembly.Location);
+
+			CoreBuildNumber = codeVer;
+			AssemblyName = assemblyName;
+			FrameworkAttribute = attribute.FrameworkName.Replace(",", ", ");
+			WebAssembly = $"Blazor {((isWebAssembly) ? "Web Assembly" : "Server")}";
+
+			Console.WriteLine("Info loaded");
+
+		}
+		catch (Exception ex)
+		{
+			string errorResult = $"{typeof(ThisAppInfoComponent)} : {nameof(OnInitialized)}";
+			Console.WriteLine(errorResult);
+			Error?.ProcessError(ex, errorResult);
+		}		
+	}
+}

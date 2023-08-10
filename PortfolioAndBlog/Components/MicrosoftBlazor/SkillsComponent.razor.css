@@ -1,0 +1,35 @@
+﻿.job {
+	background: #515151;
+	padding: 0.5rem;
+	border-bottom: #761aee 5px solid;
+}
+
+.topHead {
+	color: #3d1570;
+	font-weight: bold;
+}
+.job-2 {
+	grid-area: job2;
+}
+
+/*a:hover {
+	color: blue;
+	cursor: pointer;
+	text-decoration: underline;
+}*/
+
+/*a:link {
+	text-decoration: none;
+	color: darkblue;
+}*/
+
+.skill-link {
+	text-decoration: none;
+	color: white;
+}
+
+	.skill-link:hover {
+		color: #3d1570;
+		cursor: pointer;
+		text-decoration: underline;
+	}

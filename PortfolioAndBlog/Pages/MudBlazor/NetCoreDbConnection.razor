@@ -1,0 +1,165 @@
+﻿@*@page "/"*@
+@page "/blog/netcoredbconnection"
+@using System.Text
+
+<PageTitle>Luis Campuzano Blog</PageTitle>
+
+<div id="blog-center">    
+	<!-- Introduction -->
+	<div>
+		<img class="headingImage" src="img/blog/NetCoreEFCore.png" alt="NetCoreEFCore Image">
+		<h1>ADDING DbContext using Dependency Injection ON NET CORE APPLICATIONS (MVC, Razor, Blazor, or WebAPI)</h1>
+		<p>We are going to add the steps for adding <strong>Entity Framework Core DbContext</strong> to a <em>.Net Core Applications</em>, 
+			this can work with any MVC, Razor and Blazor application starting from version Core 3.1
+		</p>
+		<em>Note: This is intended for me (<span>the creator</span>) to be proactive at the time of creating my projects, it is not intended
+			to be follow as a tutorial.
+		</em>
+		<p>Also this steps are intended to be use on Visual Studio 2019 or later (could work on Visual Studio 2017, 
+			hasn't been tested by me)
+		</p>
+	</div>
+	<!-- Installing Nuget Packages -->
+	<div>
+		<h3>First We add the Nuget packages (if using .net 6, don't add the version) by opening Package Manger Console</h3>
+		<span class="h5">Net 6</span>
+
+		<PrismComponent Language="csharp" HasWhitespace=true HasLineNumber=true DataStart="1">
+		<Text>@AddNet6NugetText()</Text>
+		</PrismComponent>
+		
+		
+		<h4>Double Check that this code is inside the Project Name (picture shows Net Core 3.1) </h4>
+		<img src="img/blog/dbconnection/ItemGroupProjectName.png" alt="Picture of Package Installed">
+		<br>
+		<span class="h5">Net 5</span>
+		<PrismComponent Language="csharp" HasWhitespace=true HasLineNumber=true DataStart="1">
+		<Text>@AddNet5NugetText()</Text>
+		</PrismComponent>
+		<br>
+
+		<span class="h5">Net Core 3.1</span>
+		<PrismComponent Language="csharp" HasWhitespace=true HasLineNumber=true DataStart="1">
+		<Text>@AddNet31NugetText()</Text>
+		</PrismComponent>
+	</div>
+	<!-- Finish Installing Nuget Packages -->
+
+	<!-- Adding Structure Code First-->
+	<div id="codeFirst">
+		 <h3>If using Code First follow this steps, if not click on this <a href="#databaseFirst">link</a> to go to the Database First Option </h3>
+		<p class="h6 marginP">Add a <span>Models</span> Folder to the Project</p>
+		<img src="img/blog/dbconnection/ModelsFolder.png" alt="Models Folder Picture">
+		<br>
+
+		<p class="h6 marginP">Inside the Models Folder create a class and add its properties (as many as you want)</p>
+		<PrismComponent Language="csharp" HasWhitespace=true HasLineNumber=true DataStart="1">
+		<Text>@AddClassModel()</Text>
+		</PrismComponent>
+		<img src="img/blog/dbconnection/CSharpClassExample.png" alt="Example of a class">
+		<br>
+
+		<p class="h6 marginP">Create a <span>Context</span> folder inside the project</p>
+		<img src="img/blog/dbconnection/ContextFolder.png" alt="Context Folder Picture">        
+		<br>
+
+		<!-- Adding Connection String-->
+		<p class="h6 marginP">Setup the connection string to the Database on the <span><code>appsettings.json</code></span> or on the 
+			<span><code>appsettings.Development.json</code></span> or for more security inside the User Secret file
+		</p>
+		<PrismComponent Language="json" HasWhitespace=true HasLineNumber=true DataStart="1">
+		<Text>@AddConnectionString()</Text>
+		</PrismComponent>
+		<img src="img/blog/dbconnection/ConnectionStringDb.png" alt="connectionString Picture">
+		<br>
+
+		<p>Using <strong>localDB</strong> Options</p>
+		<PrismComponent Language="json" HasWhitespace=true HasLineNumber=true DataStart="1">
+		<Text>@AddConnectionStringLocal()</Text>
+		</PrismComponent>
+		<br />
+		<!-- Finish Adding Connection String-->
+	
+	</div>
+	<!-- Finish Adding Structure Code First-->
+
+</div>
+
+@code {
+	//string _prismtext;
+	//public string Section { get; set; } = "Net6Nuget";
+
+	protected override void OnInitialized()
+	{
+		//_prismtext = Section switch
+		//{
+		//	"Net6Nuget" => AddNet6Text(),
+		//	_ => _prismtext
+		//};
+		
+	}
+
+
+	public string AddNet6NugetText()
+	{
+		StringBuilder sb = new StringBuilder("Install-Package Microsoft.EntityFrameworkCore" + Environment.NewLine);
+		sb.Append("Install-Package Microsoft.EntityFrameworkCore.SqlServer" + Environment.NewLine);
+		sb.Append("Install-Package Microsoft.EntityFrameworkCore.Tools" + Environment.NewLine);
+		sb.Append("Install-Package Microsoft.EntityFrameworkCore.Design" + Environment.NewLine);
+		sb.Append(Environment.NewLine);
+
+		return sb.ToString();
+	}
+
+	public string AddNet5NugetText()
+	{
+		StringBuilder sb = new StringBuilder("Install-Package Microsoft.EntityFrameworkCore -version 5.0.12" + Environment.NewLine);
+		sb.Append("Install-Package Microsoft.EntityFrameworkCore.SqlServer -version 5.0.12" + Environment.NewLine);
+		sb.Append("Install-Package Microsoft.EntityFrameworkCore.Tools -version 5.0.12" + Environment.NewLine);
+		sb.Append("Install-Package Microsoft.EntityFrameworkCore.Design -version 5.0.12" + Environment.NewLine);
+		sb.Append(Environment.NewLine);
+
+		return sb.ToString();
+	}
+
+	public string AddNet31NugetText()
+	{
+		StringBuilder sb = new StringBuilder("Install-Package Microsoft.EntityFrameworkCore -version 3.1.12" + Environment.NewLine);
+		sb.Append("Install-Package Microsoft.EntityFrameworkCore.SqlServer -version 3.1.12" + Environment.NewLine);
+		sb.Append("Install-Package Microsoft.EntityFrameworkCore.Tools -version 3.1.12" + Environment.NewLine);
+		sb.Append("Install-Package Microsoft.EntityFrameworkCore.Design -version 3.1.12" + Environment.NewLine);
+		sb.Append("Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design -version 3.1.5" + Environment.NewLine);
+		sb.Append(Environment.NewLine);
+
+		return sb.ToString();
+	}
+	public string AddClassModel()
+	{
+		StringBuilder sb = new StringBuilder("public class Person" + Environment.NewLine);
+		sb.Append("{" + Environment.NewLine);
+		sb.Append("\t[Key]" + Environment.NewLine);
+		sb.Append("\tpublic int Id { get; set; }" + Environment.NewLine);
+		sb.Append("\tpublic string FirstName { get; set; }" + Environment.NewLine);
+		sb.Append("\tpublic string LastName { get; set; }" + Environment.NewLine);
+		sb.Append("}" + Environment.NewLine);
+
+		return sb.ToString();
+	}
+	public string AddConnectionString()
+	{
+		StringBuilder sb = new StringBuilder("\"ConnectionStrings\": {" + Environment.NewLine);
+		sb.Append("\t\"DbConnection\": \"Server=localhost;Initial Catalog=<DBName>;Trusted_Connection=True;MultipleActiveResultSets=True\"" + Environment.NewLine);
+		sb.Append("}," + Environment.NewLine);
+
+		return sb.ToString();
+	}
+
+	public string AddConnectionStringLocal()
+	{
+		StringBuilder sb = new StringBuilder("\"ConnectionStrings\": {" + Environment.NewLine);
+		sb.Append("\t\"DbConnection\": \"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=<DBName>;Trusted_Connection=True;MultipleActiveResultSets=True;\"" + Environment.NewLine);
+		sb.Append("}," + Environment.NewLine);
+
+		return sb.ToString();
+	}
+}

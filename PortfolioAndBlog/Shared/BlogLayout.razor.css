@@ -1,0 +1,8 @@
+﻿#blog-bg {
+	/*Link for the full Background color height and width : https://dev.to/lennythedev/css-gotcha-how-to-fill-page-with-a-div-270j */
+	min-height: 100vh;
+	/*height: 100vh;*/
+	width: 100vw;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background-color: lightgray !important;
+}

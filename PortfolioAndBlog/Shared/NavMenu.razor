@@ -1,0 +1,96 @@
+﻿@using Microsoft.AspNetCore.Components.WebAssembly.Hosting
+@inject IWebAssemblyHostEnvironment HostEnvironment
+
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Luis' Portfolio and Blog</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-browser" aria-hidden="true"></span>Main Page
+            </NavLink>
+        </div>
+        @if(Env == "Production")
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/PortfolioBlazorWasm/aboutmecode" >
+                    <span class="oi oi-home" aria-hidden="true"></span> About Me
+                </NavLink>
+            </div>
+        
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/PortfolioBlazorWasm/myjobscode" >
+                    <span class="oi oi-person" aria-hidden="true"></span> Work Experience
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/PortfolioBlazorWasm/myprojectscode" >
+                    <span class="oi oi-project" aria-hidden="true"></span> My Projects
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/PortfolioBlazorWasm/contact" >
+                    <span class="oi oi-envelope-closed" aria-hidden="true"></span> How To Reach Me
+                </NavLink>
+            </div>
+        }
+        else if(Env == "Development")
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/aboutmecode" >
+                    <span class="oi oi-home" aria-hidden="true"></span> About Me
+                </NavLink>
+            </div>
+        
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/myjobscode" >
+                    <span class="oi oi-person" aria-hidden="true"></span> Work Experience
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/myprojectscode" >
+                    <span class="oi oi-project" aria-hidden="true"></span> My Projects
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/contact" >
+                    <span class="oi oi-envelope-closed" aria-hidden="true"></span> How To Reach Me
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="/blog" >
+                    <span class="oi oi-task" aria-hidden="true"></span> Blog
+                </NavLink>
+            </div>
+        }
+
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+
+
+    public String Env { get; set; }
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    protected override void OnInitialized()
+    {
+        Env = HostEnvironment.Environment;
+    }
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

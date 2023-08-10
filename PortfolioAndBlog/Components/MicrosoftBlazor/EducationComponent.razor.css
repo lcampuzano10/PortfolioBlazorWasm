@@ -1,0 +1,44 @@
+﻿.job {
+	background: #515151;
+	padding: 0.5rem;
+	border-bottom: #761aee 5px solid;
+}
+
+.topHead {
+	color: #3d1570;
+	font-weight: bold;
+}
+
+.job-3 {
+	grid-area: job3;
+}
+
+.degree {
+	padding-left: 25px;
+}
+
+.education {
+	color: #3d1570;
+	font-weight: 700;
+	padding-left: 25px;
+}
+
+.school {
+	font-style: italic;
+	padding-left: 25px;
+}
+
+.resume-link {
+	text-decoration: none;
+	color: #3c176b;
+}
+
+	.resume-link:hover {
+		color: #3d1570;
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+.resume-margin {
+	margin-left: 25px;
+}

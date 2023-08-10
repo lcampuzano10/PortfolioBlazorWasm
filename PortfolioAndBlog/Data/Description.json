@@ -1,0 +1,11 @@
+{
+	"AboutMePage": {
+		"Heading1Part1": "About",
+		"Heading1Part2": "Me",
+		"Info": {
+			"Heading": "Biography",
+			"ParagraphStart": ".NET Developer with ",
+			"ParagraphEnd": "+ years of experience developing Web, Console Applications, and WinForms using .NET Core, ASP.NET MVC, C#.Net and MS SQL. Skilled in architecting and executing customized, data-driven solutions, hosted              on-premises and Cloud. Knowledge of Entity Framework Core, Razor pages, Blazor server, Blazor WebAssembly, Dapper, JSON, Visual Studio, and Postman."
+		}
+	}
+}

@@ -1,0 +1,41 @@
+﻿@page "/prismTest"
+@using System.Text
+
+<h2>Using Component but With Text added manually</h2>
+	<PrismComponent Language="csharp" HasLineNumber=true DataStart="1">
+		<Text>	//This is a text
+	[HttpGet("{id:guid}")]
+	public void GetAll()
+	{
+
+	}</Text>
+	</PrismComponent>
+
+
+<div class="col-md-6" style="width:100px; height:30px;">
+	<h2>Using Component but With Text added using StringBuilder</h2>
+	<PrismComponent Language="csharp" HasLineNumber=true DataStart="1">
+		<Text>@TextToAdd</Text>
+	</PrismComponent>
+</div>
+
+@code {
+	public string TextToAdd { get; set; }
+
+	protected override void OnInitialized()
+	{
+		AddText();
+	}
+
+
+	public void AddText()
+	{
+		StringBuilder sb = new StringBuilder("//This is a text\n");
+		sb.Append("[HttpGet(\"{id:guid}\")]\n");
+		sb.Append("public void GetAll()\n");
+		sb.Append("{\n\n");
+		sb.Append("}");
+
+		TextToAdd = sb.ToString();
+	}
+}

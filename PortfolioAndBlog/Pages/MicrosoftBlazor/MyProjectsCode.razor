@@ -1,0 +1,51 @@
+﻿@page "/myprojectscode"
+@page "/PortfolioBlazorWasm/myprojectscode"
+@inject IJSRuntime JsRuntime
+
+<PageTitle>Luis Campuzano Portfolio - My Projects</PageTitle>
+
+<div id="work">
+    @if (MyProjectsPageInfo is not null)
+    {
+       <h1 class="lg-heading">@MyProjectsPageInfo.HeadingPart1 <span class="text-lc-secondary">@MyProjectsPageInfo.HeadingPart2</span></h1>
+       <h2 class="sm-heading">
+            @MyProjectsPageInfo.InfoHeading
+        </h2>
+        <div class="projects text-white">			
+			@foreach (MyProject project in MyProjectsPageInfo.Projects)
+            {
+                <MyProjectsComponent Project="project" />
+            }           
+        </div>
+    }
+</div>
+
+ <a class="top-link hide" id="js-top" @onclick="OnButtonClick">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+      <span class="screen-reader-text">Back to top</span>
+    </a>
+
+@code {
+    public MyProjectsPage MyProjectsPageInfo { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        MyProjectsPageInfo = LoadProjects();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JsRuntime.InvokeVoidAsync("scrollFunc");
+    }
+
+    private MyProjectsPage LoadProjects()
+    {
+        return SeedData.MyProjectsInfo;
+    }
+
+    private async void OnButtonClick()
+    {
+        await JsRuntime.InvokeVoidAsync("OnScrollEvent");
+    }
+}

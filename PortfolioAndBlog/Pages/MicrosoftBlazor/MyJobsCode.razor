@@ -1,0 +1,64 @@
+﻿@page "/myjobscode"
+@page "/PortfolioBlazorWasm/myjobscode"
+@using PortfolioAndBlog.Models
+
+<PageTitle>Luis Campuzano Portfolio - My Work</PageTitle>
+
+<div id="about">
+	<h1 class="lg-heading">My <span class="text-lc-secondary">Work</span></h1>
+	<h2 class="sm-heading"></h2>
+	<div class="about-info">
+		@if (MyJobsInfo is not null)
+		{
+			@foreach (var (jobs, index) in MyJobsInfo.Select((value, i) => (value, i)))
+			{
+				<JobsComponent MyJobs="jobs" />
+			}
+		}
+		@if (SkillInfo is not null)
+		{
+			<SkillsComponent Skill="SkillInfo" />
+		}
+
+		@if (EducationInfo is not null)
+		{
+			<EducationComponent EducationInfo="EducationInfo" />
+		}
+	</div>
+</div>
+
+@*<div>
+	<button type="button" class="btn btn-primary btn-sm">Open Dialog</button>
+</div>
+*@
+
+@code {
+
+	public Skill SkillInfo { get; set; }
+	public List<Education> EducationInfo { get; set; }
+	public List<MyJobsPage> MyJobsInfo { get; set; }
+
+	protected override void OnInitialized()
+	{
+		base.OnInitialized();
+		SkillInfo = LoadSkills();
+		EducationInfo = LoadEducation();
+		MyJobsInfo = LoadMyJobs();
+
+	}
+
+	private Skill LoadSkills()
+	{
+		return SeedData.SkillInfo;
+	}
+
+	private List<Education> LoadEducation()
+	{
+		return SeedData.EducationInfo;
+	}
+
+	private List<MyJobsPage> LoadMyJobs()
+	{
+		return SeedData.MyJobsInfo;
+	}
+}

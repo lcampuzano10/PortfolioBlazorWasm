@@ -1,0 +1,68 @@
+﻿@inject IJSRuntime _jsRuntime
+
+@*@if (Text != null)
+{
+
+}
+else
+{
+	<p>Is not null</p>
+}*@
+
+<pre class="@lineNumber" data-start="@DataStart">	
+<code class="@_language @whiteSpace">@Text
+</code></pre>
+
+@*<pre class="line-numbers" data-start="1">*@
+@*<code class="language-csharp no-whitespace-normalization">@Text*@
+@*</code></pre>*@
+
+@*<pre class="@lineNumber" data-start="@DataStart">
+<code class="@_language">@Text
+</code></pre>*@
+
+
+@code {
+
+	string lineNumber;
+	string whiteSpace;
+	string _language;
+
+	[Parameter]
+	public RenderFragment? Text { get; set; }
+
+	[Parameter]
+	public bool HasLineNumber { get; set; }
+
+	[Parameter]
+	public bool HasWhitespace { get; set; }
+
+	[Parameter]
+	public string DataStart { get; set; }
+
+	[Parameter]
+	public string Language { get; set; }
+
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		if (firstRender)
+		{
+			await _jsRuntime.InvokeVoidAsync("Prism.highlightAll");			
+		}
+	}
+
+	protected override void OnInitialized()
+	{
+		if(HasLineNumber)
+			lineNumber = "line-numbers";
+		if(HasWhitespace)
+			whiteSpace = "no-whitespace-normalization";
+
+		_language = Language switch
+		{
+			"csharp" => "language-csharp",
+			"json" => "language-json",
+			_ => ""
+		};
+	}
+}

@@ -1,0 +1,61 @@
+﻿.job {
+	background: #515151;
+	padding: 0.5rem;
+	border-bottom: #761aee 5px solid;
+}
+
+.job-1 {
+	grid-area: job1;
+}
+
+.topHead {
+	color: #3d1570;
+	font-weight: bold;
+}
+
+/*a:hover {
+	color: blue;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+a:link {
+	text-decoration: none;
+}*/
+
+.job-link {
+	text-decoration: none;
+	color: white;
+}
+
+	.job-link:hover {
+		color: #3d1570;
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+.info-text-link{
+	display: none;
+}
+
+
+/*Small Screen ???*/
+@media screen and (max-width: 900px) {
+	.info-text-link {
+		display: block;
+	}
+
+	/*.job-link {
+		text-decoration: underline;
+		color: deepskyblue;
+	}*/
+}
+
+/*Big Screen ??*/
+@media (min-width: 641px) {
+	/*.home-info {
+		grid-template-areas: "bioimage" 
+			"bio";
+		grid-template-columns: 1fr;
+	}*/
+}

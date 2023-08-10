@@ -1,0 +1,39 @@
+﻿.home-info {
+    display: grid;
+    padding-top: 100px;
+    grid-gap: 20px;
+    grid-template-areas: "bioimage bio bio"
+        /*"job1 job2 job3"*/
+        ;
+    grid-template-columns: repeat(3, 1fr);
+}
+    .home-info .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: #761aee 3px solid;
+    }
+
+    .home-info .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+
+/*Small Screen ???*/
+@media screen and (max-width: 900px) {
+    .home-info {
+        padding-top: 20px;
+        grid-template-areas: "bioimage"
+            "bio";
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Big Screen ??*/
+@media (min-width: 641px) {
+    /*.home-info {
+        grid-template-areas: "bioimage" 
+            "bio";
+        grid-template-columns: 1fr;
+    }*/
+}

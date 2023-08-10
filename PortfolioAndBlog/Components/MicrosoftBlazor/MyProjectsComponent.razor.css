@@ -1,0 +1,22 @@
+﻿img {
+	width: 100%;
+	border: 3px #fff solid;
+}
+
+	img:hover {
+		opacity: 0.5;
+		border-color: #761aee;
+		transition: all 0.5s ease-out;
+		cursor: pointer;
+	}
+
+.project-link {
+	text-decoration: none;
+	color: white;
+}
+
+	.project-link:hover {
+		/*color: #3d1570;*/
+		cursor: pointer;
+		/*text-decoration: underline;*/
+	}

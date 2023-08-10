@@ -1,0 +1,41 @@
+﻿@using PortfolioAndBlog.Models
+<div class="job job-2">
+	<h3 class="topHead">@Skill.DescriptionHeading.GetDisplayName().ToUpper()</h3>
+	<ul  class="text-white">
+		@foreach (Description descr in Skill.Descriptions.Take(6))
+		{
+			<li>@descr.DescriptionText</li>
+		}
+		<li><a class="skill-link" @onclick="() => OpenJobDialog()">... Click Here to see All of them</a></li>
+	</ul>
+</div>
+
+@if (SkillsDialogOpen)
+{
+	<SkillsDialogComponent
+				 DialogType = "Models.ModalDialogType.Ok"
+				 Skill = "Skill"
+				 OnClose="@OnDialogClose">
+	</SkillsDialogComponent>
+}
+
+@code {
+
+	public bool SkillsDialogOpen { get; set; }
+
+	[Parameter]
+	public Skill Skill { get; set; }
+
+	private void OnDialogClose(bool accepted)
+	{
+		SkillsDialogOpen = false;
+		StateHasChanged();
+	}
+
+	private void OpenJobDialog()
+	{
+		SkillsDialogOpen = true;
+		StateHasChanged();
+	}
+
+}
