@@ -11,11 +11,12 @@
        <h2 class="sm-heading">
             @MyProjectsPageInfo.InfoHeading
         </h2>
-        <div class="projects text-white">			
-			@foreach (MyProject project in MyProjectsPageInfo.Projects)
+        <div class="projects text-white">
+           @*  <div>Company: @MyProjectsPageInfo.Projects.First().Company </div> *@
+            @foreach (MyProject project in MyProjectsPageInfo.Projects.OrderBy(d => d.Company))
             {
                 <MyProjectsComponent Project="project" />
-            }           
+            }
         </div>
     }
 </div>
